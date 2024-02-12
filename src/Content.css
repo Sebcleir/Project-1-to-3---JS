@@ -1,0 +1,30 @@
+.content {
+    margin-top: 150px;
+    display: inline-flex;
+}
+.left-sidebar {
+    float: left;
+}
+
+.main-content {
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.right-sidebar {
+    float: right;
+}
+.left-post {
+    margin-left: 20px;
+    width: 300px;
+    height: 200px;
+}
+.main-post {
+    margin-left: 10px;
+    margin-left: 10px;
+    width: 500px;
+    height: 250px;
+}
+.right-post {
+    margin-right: 10px;
+}
