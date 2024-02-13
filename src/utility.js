@@ -40,3 +40,4 @@ export let rightSidebarPosts = [
         "image": "https://media.wired.com/photos/65c6afa39556da5b0d5c3c48/16:9/pass/Martin-Scorsese-Squarespace-Super-Bowl-Culture.jpg"
     }
 ]
+export let posts = []

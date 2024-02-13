@@ -1,4 +1,4 @@
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import "./Content.css"
 import { leftSidebarPosts, mainPosts, rightSidebarPosts } from "./utility";

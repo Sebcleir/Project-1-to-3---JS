@@ -1,0 +1,12 @@
+.create-post {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 100px;
+}
+.form-field {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}

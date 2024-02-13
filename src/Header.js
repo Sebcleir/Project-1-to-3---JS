@@ -1,7 +1,10 @@
+import { useNavigate } from "react-router-dom";
 import "./Header.css";
 import LogoHeader from "./assets/images/logo-header.svg"
 
 function Header() {
+    const navigate = useNavigate()
+
     return (
         <div className="header">
             <img style={{marginLeft: "10px"}} src={LogoHeader} alt="logo" />
@@ -17,6 +20,7 @@ function Header() {
                 <a className="navigation-item" href="#">MERCH</a>
             </div>
             <div className="header-right">
+                <button className="subscribe" onClick={() => navigate("/create")}>Create Post</button>
                 <a className="navigation-item" href="#">SIGNIN</a>
                 <button className="navigation-item subscribe">SUBSCRIBE</button>
                 <a href="#">Search</a>

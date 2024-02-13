@@ -5,15 +5,21 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import PostDetail from './PostDetail';
+import CreatePost from './CreatePost';
 
+// Routes for the app
 const routes = createBrowserRouter([
   {
     path: "/",
     element: <App />,
   },
   {
-    path: "/post/:id",
+    path: "/post/:post_id",
     element: <PostDetail />
+  },
+  {
+    path: "/create",
+    element: <CreatePost />
   }
 ])
 
