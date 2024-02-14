@@ -2,15 +2,27 @@ import { useNavigate } from "react-router-dom";
 
 import "./Content.css"
 import { leftSidebarPosts, mainPosts, rightSidebarPosts } from "./utility";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 function Content() {
     const navigate = useNavigate()
+    const [posts, setPosts] = useState([])
+
+    async function getPosts() {
+        let response = await axios.get("http://localhost:8080/post")
+        setPosts(response.data)
+    }
+
+    useEffect(() => {
+        getPosts()
+    }, [])
 
     return (
         <div className="content">
             <div className="left-sidebar">
                 {
-                    leftSidebarPosts.map(post => (
+                    posts.map(post => (
                         <div className="left-post" onClick={() => navigate(`/post/${post.id}/`)}>
                             <div>
                                 <h3>{post.title}</h3> By <p>{post.author}</p>

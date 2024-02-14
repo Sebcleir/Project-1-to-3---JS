@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Header from "./Header";
 import "./CreatePost.css"
 import { posts } from "./utility";
+import axios from "axios"
 
 function CreatePost() {
     const [title, setTitle] = useState()
@@ -16,7 +17,7 @@ function CreatePost() {
 
     console.log("posts before saving", posts)
 
-    function createPost (e) {
+    async function createPost (e) {
         e.preventDefault()
         console.log("title", title)
         console.log("description", description)
@@ -26,10 +27,11 @@ function CreatePost() {
         let payload = {
             "title": title,
             "description": description,
-            "image": image,
+            // "image": image,
             "author": author,
             "category": category
         }
+        await axios.post("http://localhost:8080/post", payload)
         posts.push(payload)
         console.log("posts after saving", posts)
         setTitle("")
